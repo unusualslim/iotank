@@ -1,0 +1,8 @@
+<h1>New State</h1>
+<%= form_for @state, local: true do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p><%= f.submit %></p>
+<% end %>

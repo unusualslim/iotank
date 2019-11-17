@@ -1,0 +1,6 @@
+<h1>Status Types</h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Status Type', new_status_type_path %>
+<% @status_types.each do |status_type| %>
+<p><%= status_type.name %></p>
+<% end %>

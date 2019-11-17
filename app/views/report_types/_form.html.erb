@@ -1,0 +1,27 @@
+<%= form_with model: @report_type, local: true do |form| %>
+  <% if  @report_type.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(report_type.errors.count, "error") %>
+          prohibited this report_type from being saved:
+      </h2>
+      <ul>
+        <% @report_type.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :short_name %>
+    <%= form.text_field :short_name %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>  
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

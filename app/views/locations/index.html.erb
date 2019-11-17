@@ -1,0 +1,15 @@
+<h1>Locations</h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Location', new_location_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>External_id</th>
+  </tr>
+  <% @locations.each do |location| %>
+    <tr> 
+      <td><%= location.name %></td>
+      <td><%= location.external_id %></td> 
+    </tr>
+  <% end %>
+</table>

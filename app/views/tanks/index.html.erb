@@ -1,0 +1,23 @@
+<h1> Tanks </h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Tank', new_tank_path %>
+<table>
+    <tr>
+      <th>External_Id</th>
+      <th>Location</th>
+      <th>Product</th>
+      <th>Capacity</th>
+      <th>Bottom</th>
+      <th>Manifolded</th>
+    </tr>
+    <% @tanks.each do |tank| %>
+      <tr>
+        <td><%= link_to tank.external_id, edit_tank_path(tank) %></td>
+        <td><%= tank.location.name %></td>
+        <td><%= tank.product_id %></td>
+        <td><%= tank.capacity %></td>
+        <td><%= tank.bottom %></td>
+        <td><%= tank.manifolded %></td>
+      </tr>
+    <% end %>
+</table>

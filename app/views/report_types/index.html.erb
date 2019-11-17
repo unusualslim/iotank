@@ -1,0 +1,7 @@
+<h1>ReportTypes</h1>
+<%= link_to 'New Report Type', new_report_type_path %>
+<% @report_types.each do |report_type| %>
+<p><%= report_type.short_name %></p>
+<p><%= report_type.name %></p>
+<br />
+<% end %>

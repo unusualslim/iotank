@@ -1,0 +1,13 @@
+<h1>Companies</h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Company', new_company_path %>
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @companies.each do |company| %>
+    <tr>
+      <td><%= company.name %></td>
+    </tr>
+  <% end %>
+</table>

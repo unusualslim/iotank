@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  external_id: 
+  product: 
+  location: one
+  capacity: 
+  bottom: 
+  manifolded: false
+
+two:
+  external_id: 
+  product: 
+  location: two
+  capacity: 
+  bottom: 
+  manifolded: false

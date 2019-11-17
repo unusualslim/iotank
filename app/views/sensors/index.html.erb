@@ -1,0 +1,19 @@
+<h1>Sensors</h1>
+<%= link_to 'New Sensor', new_sensor_path %>
+
+<table>
+  <tr>
+    <td>Location</td>
+    <td>External_id</td>
+    <td>Description</td>
+    <td colspan="1"></td>
+  </tr>
+  <% @sensors.each do |sensor| %>
+    <tr>
+      <td><%= sensor.location.name %></td>
+      <td><%= sensor.external_id %></td>
+      <td><%= sensor.description %></td>
+      <td><%= link_to 'Edit', edit_sensor_path(sensor) %></td>
+    </tr>
+  <% end %>
+</table>

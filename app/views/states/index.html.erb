@@ -1,0 +1,6 @@
+<h1>States</h1>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New State', new_state_path %>
+<% @states.each do |state| %>
+<p><%= state.name %></p>
+<% end %>

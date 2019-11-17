@@ -1,0 +1,41 @@
+<%= form_with model: @tank, local: true do |form| %>
+  <% if @tank.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@tank.errors.count, "error") %> prohibited
+        this Tank from being saved:
+      </h2>
+      <ul>
+        <% @tank.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <p>
+    <%= form.label :external_id %>
+    <%= form.text_field :external_id %>
+   </p>
+   <p>
+     <%= form.label :location %>
+     <%= form.collection_select :location_id, Location.all, :id, :name, prompt: true %>
+   <p>
+    <%= form.label :product %>
+    <%= form.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+   </p>
+   <p>
+     <%= form.label :capacity %>
+     <%= form.text_field :capacity %>
+   </p>
+   <p>
+    <%= form.label :bottom %>
+    <%= form.text_field :bottom %>
+  </p>
+  <p>
+    <%= form.label :manifolded %>
+    <%= form.check_box :manifolded %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
